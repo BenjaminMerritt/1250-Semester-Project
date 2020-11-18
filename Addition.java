@@ -30,13 +30,14 @@ public class Addition
         }
         while(message3 == "y");
         
+        do
+       {
 
-        
-        
         sum = message1 + message2;
         
         JOptionPane.showMessageDialog(null, "The sum of the numbers you have chosen is " + sum);
-        
+       }
+       while(message3 == "n");
      
 
 
