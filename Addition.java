@@ -18,7 +18,7 @@ public class Addition
         
         message2 = Integer.parseInt(JOptionPane.showInputDialog("What's the 2nd variable you wish to add? "));
 
-        message3 = JOptionPane.showInputDialog("Would you like to add another number? ");
+        message3 = JOptionPane.showInputDialog("Would you like to add another number? y/n ");
 
         if(message3 == "y")
         {
