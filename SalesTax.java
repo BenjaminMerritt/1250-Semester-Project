@@ -13,7 +13,7 @@ public class SalesTax
 
     public SalesTax()
     {
-        calculate();
+        
     }
 
     public void setSubtotal(double subtotal) 
@@ -96,8 +96,6 @@ public class SalesTax
         grandTotal = subtotal + taxAmount;
 
         JOptionPane.showMessageDialog(null, "Here's the breakdown...\n \n" + toString());
-
-        History.add(toString());
     }
 
     public String toString()
@@ -105,7 +103,7 @@ public class SalesTax
         String msg = "***** Sales Tax Calculation *****";
 
         msg += "\n \nSubtotal: $" + formatter.format(subtotal);
-        msg += "\nTax: $" + formatter.format(taxAmount) + "(" + formatter.format(taxRate) + "%)";
+        msg += "\nTax: $" + formatter.format(taxAmount) + " (" + formatter.format(taxRate) + "%)";
         msg += "\n----------------------";
         msg += "\nGrand Total: $" + formatter.format(grandTotal);
 

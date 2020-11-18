@@ -12,7 +12,7 @@ public class Exponential
 
     public Exponential()
     {
-        calculate();
+
     }
 
     public void setBase(int base) 
@@ -55,7 +55,7 @@ public class Exponential
         {
             int denominator = base;
 
-            for(int i = power; i > 0; i--)
+            for(int i = power; i > 1; i--)
             {
                 denominator = denominator * base;
             }
@@ -70,7 +70,7 @@ public class Exponential
         {
             answer = base;
 
-            for(int i = power; i > 0; i--)
+            for(int i = power; i > 1; i--)
             {
                 answer = answer * base;
             }
@@ -86,7 +86,7 @@ public class Exponential
         msg += "\n \nBase: " + base;
         msg += "\nPower: " + power;
         msg += "\n----------------------";
-        msg += "Answer: " + answer;
+        msg += "\nAnswer: " + answer;
 
         return msg;
     }
