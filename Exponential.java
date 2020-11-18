@@ -18,7 +18,7 @@ public class Exponential
         String input = JOptionPane.showInputDialog("***** Exponents Calculator *****" +
                         "\n \nEnter the base number of the equation.");
 
-        int inputInt = Integer.parseInt(input);
+        base = Integer.parseInt(input);
 
         
     }
