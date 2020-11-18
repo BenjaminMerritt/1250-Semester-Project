@@ -9,16 +9,13 @@ public class SalesTax
     private double taxAmount;
     private double grandTotal;
 
-    public SalesTax(double subtotal, double taxRate)
-    {
-        DecimalFormat formatter = new DecimalFormat("###,###,##0.00");
+    DecimalFormat formatter = new DecimalFormat("###,###,##0.00");
 
-        this.subtotal = subtotal;
-        this.taxRate = Double.parseDouble(formatter.format(taxRate));
-        taxAmount = subtotal * taxRate * 0.001;
-        grandTotal =subtotal + taxAmount;
+    public SalesTax()
+    {
+        calculate();
     }
-    
+
     public void setSubtotal(double subtotal) 
     {
         this.subtotal = subtotal;
@@ -49,14 +46,68 @@ public class SalesTax
         return grandTotal;
     }
 
+    public void calculate()
+    {
+        String input = JOptionPane.showInputDialog("***** Sales Tax Calculator *****" +
+                            "\n \nEnter the subtotal amount.");
+
+        double inputDouble = Double.parseDouble(input);
+
+        if(inputDouble > 0)
+        {
+            subtotal = inputDouble;
+        }
+        else
+        {
+            do
+            {
+                input = JOptionPane.showInputDialog("Invalid input, please enter a positive number." +
+                            "\n \nEnter the subtotal amount.");
+
+                inputDouble = Double.parseDouble(input);
+            } while(inputDouble < 0);
+
+            subtotal = inputDouble;
+        }
+
+        input = JOptionPane.showInputDialog("Enter the tax rate (percentage). \n \nEx. 9.75");
+
+        inputDouble = Double.parseDouble(input);
+
+        if(inputDouble > 0)
+        {
+            taxRate = inputDouble;
+        }
+        else
+        {
+            do
+            {
+                input = JOptionPane.showInputDialog("Invalid input, please enter a positive number." +
+                            "\n \nEnter the tax rate (percentage). \n \nEx. 9.75");
+
+                inputDouble = Double.parseDouble(input);
+            } while(inputDouble < 0);
+
+            taxRate = inputDouble;
+        }
+
+        taxAmount = taxRate * subtotal * 0.01;
+
+        grandTotal = subtotal + taxAmount;
+
+        JOptionPane.showMessageDialog(null, "Here's the breakdown...\n \n" + toString());
+
+        History.add(toString());
+    }
+
     public String toString()
     {
-        String msg = "";
+        String msg = "***** Sales Tax Calculation *****";
 
-        msg += "Subtotal: $" + subtotal;
-        msg += "\nTax: $" + taxAmount + "(" + taxRate + "%)";
+        msg += "Subtotal: $" + formatter.format(subtotal);
+        msg += "\nTax: $" + formatter.format(taxAmount) + "(" + formatter.format(taxRate) + "%)";
         msg += "\n----------------------";
-        msg += "\nGrand Total: $" + grandTotal;
+        msg += "\nGrand Total: $" + formatter.format(grandTotal);
 
         return msg;
     }
