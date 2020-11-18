@@ -6,11 +6,38 @@ public class Exponential
 {
     int base;
     int power;
-    int answer;
+    private int answer;
+    
+    DecimalFormat formatter = new DecimalFormat("##,###,##0.0#######");
 
     public Exponential()
     {
         calculate();
+    }
+
+    public void setBase(int base) 
+    {
+        this.base = base;
+    }
+
+    public void setPower(int power) 
+    {
+        this.power = power;
+    }
+
+    public int getBase() 
+    {
+        return base;
+    }
+
+    public int getPower() 
+    {
+        return power;
+    }
+
+    public int getAnswer() 
+    {
+        return answer;
     }
 
     public void calculate()
