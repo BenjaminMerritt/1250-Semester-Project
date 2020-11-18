@@ -20,19 +20,23 @@ public class Addition
 
         message3 = JOptionPane.showInputDialog("Would you like to add another number? y/n ");
 
-        if(message3 == "y")
+        do
         {
             message4 = Integer.parseInt(JOptionPane.showInputDialog("What is the next number you would like to add? "));
             additives.add(message4);
             sum = message1 + message2 + message4;
             JOptionPane.showMessageDialog(null, "The sum of the numbers you have chosen is " + sum);
+            message3 = JOptionPane.showInputDialog("Would you like to add another number? y/n ");
         }
-        else
-        {
-            sum = message1 + message2;
+        while(message3 == "y");
         
-            JOptionPane.showMessageDialog(null, "The sum of the numbers you have chosen is " + sum);
-        }
+
+        
+        
+        sum = message1 + message2;
+        
+        JOptionPane.showMessageDialog(null, "The sum of the numbers you have chosen is " + sum);
+        
      
 
 
