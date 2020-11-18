@@ -104,7 +104,7 @@ public class SalesTax
     {
         String msg = "***** Sales Tax Calculation *****";
 
-        msg += "Subtotal: $" + formatter.format(subtotal);
+        msg += "\n \nSubtotal: $" + formatter.format(subtotal);
         msg += "\nTax: $" + formatter.format(taxAmount) + "(" + formatter.format(taxRate) + "%)";
         msg += "\n----------------------";
         msg += "\nGrand Total: $" + formatter.format(grandTotal);

@@ -47,6 +47,47 @@ public class Exponential
 
         base = Integer.parseInt(input);
 
-        
+        input = JOptionPane.showInputDialog("Enter the power (index) for the equation.");
+
+        power = Integer.parseInt(input);
+
+        if(power < 0)
+        {
+            int denominator = base;
+
+            for(int i = power; i > 0; i--)
+            {
+                denominator = denominator * base;
+            }
+
+            answer = 1 / denominator;
+        }
+        if(power == 0)
+        {
+            answer = 1;
+        }
+        else
+        {
+            answer = base;
+
+            for(int i = power; i > 0; i--)
+            {
+                answer = answer * base;
+            }
+        }
+
+        JOptionPane.showMessageDialog(null, toString());
+    }
+
+    public String toString()
+    {
+        String msg = "***** Exponential Calculation *****";
+
+        msg += "\n \nBase: " + base;
+        msg += "\nPower: " + power;
+        msg += "\n----------------------";
+        msg += "Answer: " + answer;
+
+        return msg;
     }
 }
