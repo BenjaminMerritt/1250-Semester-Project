@@ -20,11 +20,11 @@ public class Multiplication
     
             multiplicatives.add(choice);
     
-            Double selectedState = 0.0;
+            int selectedState = 0;
 
             Object[] possibleStates = { "Yes", "No"};
 
-            selectedState = Double.parseDouble(JOptionPane.showOptionDialog(null, "Would you like to multiply another number?", "Multiplication Calculator", +
+            selectedState = JOptionPane.showOptionDialog(null, "Would you like to multiply another number?", "Multiplication Calculator", +
                              JOptionPane.INFORMATION_MESSAGE, selectedState, null, possibleStates, possibleStates[0]));
             
             if(selectedState == 0)
@@ -34,8 +34,8 @@ public class Multiplication
                     choice = Integer.parseInt(JOptionPane.showInputDialog("What is the next number you would like to multiply? "));
                     multiplicatives.add(choice);
     
-                    selectedState = Double.parseDouble(JOptionPane.showOptionDialog(null, "Would you like to multiply another number?", "Multiplication Calculator", +
-                             JOptionPane.DEFAULT_OPTION, selectedState, null, possibleStates, possibleStates[0]));
+                    selectedState = JOptionPane.showOptionDialog(null, "Would you like to multiply another number?", "Multiplication Calculator", +
+                             JOptionPane.DEFAULT_OPTION, selectedState, null, possibleStates, possibleStates[0]);
                 } while(selectedState == 0);
             }
            
