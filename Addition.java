@@ -22,7 +22,7 @@ public class Addition
         additives.add(choice);
 
         selectedState = JOptionPane.showOptionDialog(null, "Would you like to add another numeber?", "Addition Calculator", +
-                         JOptionPane.DEFAULT_OPTION, selectedState, null, possibleStates, possibleStates[0]);
+                         JOptionPane.INFORMATION_MESSAGE, selectedState, null, possibleStates, possibleStates[0]);
         
         if(selectedState == 0)
         {
