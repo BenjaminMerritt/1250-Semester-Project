@@ -8,38 +8,41 @@ public class Addition
 
         ArrayList<Integer> additives = new ArrayList<Integer>();
 
-        int message1;
-        int message2;
+        int choice;
         String message3;
         int message4;
-        int sum;
+        int sum = 0;
+        int selectedState = 0;
+        Object[] possibleStates = { "Yes", "No"};
 
-        message1 = Integer.parseInt(JOptionPane.showInputDialog("What's the 1st variable you wish to add? "));
+        choice = Integer.parseInt(JOptionPane.showInputDialog("What's the 1st number you wish to add?"));
+
+        additives.add(choice);
         
-        message2 = Integer.parseInt(JOptionPane.showInputDialog("What's the 2nd variable you wish to add? "));
+        choice = Integer.parseInt(JOptionPane.showInputDialog("What's the 2nd number you wish to add?"));
 
-        message3 = JOptionPane.showInputDialog("Would you like to add another number? y/n ");
+        additives.add(choice);
 
-        do
+        selectedState = JOptionPane.showOptionDialog(null, "Would you like to add another numeber?", "Addition Calculator", +
+                         JOptionPane.DEFAULT_OPTION, selectedState, null, possibleStates, possibleStates[0]);
+        
+        if(selectedState == 0)
         {
-            message4 = Integer.parseInt(JOptionPane.showInputDialog("What is the next number you would like to add? "));
-            additives.add(message4);
-            sum = message1 + message2 + message4;
-            JOptionPane.showMessageDialog(null, "The sum of the numbers you have chosen is " + sum);
-            message3 = JOptionPane.showInputDialog("Would you like to add another number? y/n ");
+            do
+            {
+                message4 = Integer.parseInt(JOptionPane.showInputDialog("What is the next number you would like to add? "));
+                additives.add(message4);
+
+                selectedState = JOptionPane.showOptionDialog(null, "Would you like to add another numeber?", "Addition Calculator", +
+                         JOptionPane.DEFAULT_OPTION, selectedState, null, possibleStates, possibleStates[0]);
+            } while(selectedState == 0);
         }
-        while(message3 == "y");
-        
-        do
-       {
-
-        sum = message1 + message2;
-        
-        JOptionPane.showMessageDialog(null, "The sum of the numbers you have chosen is " + sum);
-       }
-       while(message3 == "n");
-     
-
-
+       
+        for(int i = 0; i < additives.size(); i++)
+        {
+            sum += additives.get(i);
+        }
+    
+        JOptionPane.showMessageDialog(null, "The sum of the numbers you have entered is " + sum);
     }
 }
