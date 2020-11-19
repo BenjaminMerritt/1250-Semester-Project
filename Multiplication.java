@@ -25,7 +25,7 @@ public class Multiplication
             Object[] possibleStates = { "Yes", "No"};
 
             selectedState = JOptionPane.showOptionDialog(null, "Would you like to multiply another number?", "Multiplication Calculator", +
-                             JOptionPane.INFORMATION_MESSAGE, selectedState, null, possibleStates, possibleStates[0]));
+                             JOptionPane.INFORMATION_MESSAGE, selectedState, null, possibleStates, possibleStates[0]);
             
             if(selectedState == 0)
             {
