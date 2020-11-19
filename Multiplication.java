@@ -39,11 +39,11 @@ public class Multiplication
                 } while(selectedState == 0);
             }
            
-            int multiply = 0;
+            int multiply = 1;
 
             for(int i = 0; i < multiplicatives.size(); i++)
             {
-                multiply += multiplicatives.get(i);
+                multiply += multiply * multiplicatives.get(i);
             }
         
             JOptionPane.showMessageDialog(null, "The product of the numbers you have entered is " + multiply);
