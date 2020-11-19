@@ -43,7 +43,7 @@ public class Multiplication
 
             for(int i = 0; i < multiplicatives.size(); i++)
             {
-                multiply += multiply * multiplicatives.get(i);
+                multiply = multiply * multiplicatives.get(i);
             }
         
             JOptionPane.showMessageDialog(null, "The product of the numbers you have entered is " + multiply);
