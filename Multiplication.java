@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Multiplication 
 {
-        ArrayList<Integer> multiplicatives = new ArrayList<Integer>();
+        ArrayList<Double> multiplicatives = new ArrayList<Double>();
 
         public Multiplication()
         {
@@ -12,20 +12,20 @@ public class Multiplication
 
         public void calculate()
         {
-            int choice = Integer.parseInt(JOptionPane.showInputDialog("What's the 1st number you wish to multiply?"));
+            double choice = Double.parseDouble(JOptionPane.showInputDialog("What's the 1st number you wish to multiply?"));
 
             multiplicatives.add(choice);
             
-            choice = Integer.parseInt(JOptionPane.showInputDialog("What's the 2nd number you wish to multiply?"));
+            choice = Double.parseDouble(JOptionPane.showInputDialog("What's the 2nd number you wish to multiply?"));
     
             multiplicatives.add(choice);
     
-            int selectedState = 0;
+            Double selectedState = 0.0;
 
             Object[] possibleStates = { "Yes", "No"};
 
-            selectedState = JOptionPane.showOptionDialog(null, "Would you like to multiply another number?", "Multiplication Calculator", +
-                             JOptionPane.INFORMATION_MESSAGE, selectedState, null, possibleStates, possibleStates[0]);
+            selectedState = Double.parseDouble(JOptionPane.showOptionDialog(null, "Would you like to multiply another number?", "Multiplication Calculator", +
+                             JOptionPane.INFORMATION_MESSAGE, selectedState, null, possibleStates, possibleStates[0]));
             
             if(selectedState == 0)
             {
@@ -34,12 +34,12 @@ public class Multiplication
                     choice = Integer.parseInt(JOptionPane.showInputDialog("What is the next number you would like to multiply? "));
                     multiplicatives.add(choice);
     
-                    selectedState = JOptionPane.showOptionDialog(null, "Would you like to multiply another number?", "Multiplication Calculator", +
-                             JOptionPane.DEFAULT_OPTION, selectedState, null, possibleStates, possibleStates[0]);
+                    selectedState = Double.parseDouble(JOptionPane.showOptionDialog(null, "Would you like to multiply another number?", "Multiplication Calculator", +
+                             JOptionPane.DEFAULT_OPTION, selectedState, null, possibleStates, possibleStates[0]));
                 } while(selectedState == 0);
             }
            
-            int multiply = 1;
+            Double multiply = 1.0;
 
             for(int i = 0; i < multiplicatives.size(); i++)
             {
@@ -48,6 +48,6 @@ public class Multiplication
         
             JOptionPane.showMessageDialog(null, "The product of the numbers you have entered is " + multiply);
 
-            multiply = 1;
+            multiply = 1.0;
         }
 }
