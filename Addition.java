@@ -24,7 +24,7 @@ public class Addition
 
             Object[] possibleStates = { "Yes", "No"};
 
-            selectedState = JOptionPane.showOptionDialog(null, "Would you like to add another numeber?", "Addition Calculator", +
+            selectedState = JOptionPane.showOptionDialog(null, "Would you like to add another number?", "Addition Calculator", +
                              JOptionPane.INFORMATION_MESSAGE, selectedState, null, possibleStates, possibleStates[0]);
             
             if(selectedState == 0)

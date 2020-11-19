@@ -24,7 +24,7 @@ public class Multiplication
 
             Object[] possibleStates = { "Yes", "No"};
 
-            selectedState = JOptionPane.showOptionDialog(null, "Would you like to multiply another numeber?", "Multiplication Calculator", +
+            selectedState = JOptionPane.showOptionDialog(null, "Would you like to multiply another number?", "Multiplication Calculator", +
                              JOptionPane.INFORMATION_MESSAGE, selectedState, null, possibleStates, possibleStates[0]);
             
             if(selectedState == 0)
@@ -46,6 +46,6 @@ public class Multiplication
                 multiply += multiplicatives.get(i);
             }
         
-            JOptionPane.showMessageDialog(null, "The sum of the numbers you have entered is " + multiply);
+            JOptionPane.showMessageDialog(null, "The product of the numbers you have entered is " + multiply);
         }
 }
