@@ -43,7 +43,7 @@ public class CalculatorDriver
 
                 break;
             case 3:
-
+                multi.calculate();
                 break;
             case 4:
 
