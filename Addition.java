@@ -9,8 +9,6 @@ public class Addition
         ArrayList<Integer> additives = new ArrayList<Integer>();
 
         int choice;
-        String message3;
-        int message4;
         int sum = 0;
         int selectedState = 0;
         Object[] possibleStates = { "Yes", "No"};
@@ -30,10 +28,10 @@ public class Addition
         {
             do
             {
-                message4 = Integer.parseInt(JOptionPane.showInputDialog("What is the next number you would like to add? "));
-                additives.add(message4);
+                choice = Integer.parseInt(JOptionPane.showInputDialog("What is the next number you would like to add? "));
+                additives.add(choice);
 
-                selectedState = JOptionPane.showOptionDialog(null, "Would you like to add another numeber?", "Addition Calculator", +
+                selectedState = JOptionPane.showOptionDialog(null, "Would you like to add another number?", "Addition Calculator", +
                          JOptionPane.DEFAULT_OPTION, selectedState, null, possibleStates, possibleStates[0]);
             } while(selectedState == 0);
         }
