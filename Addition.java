@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Addition 
 {
-        ArrayList<Integer> additives = new ArrayList<Integer>();
+        ArrayList<Double> additives = new ArrayList<Double>();
 
         public Addition()
         {
@@ -12,11 +12,11 @@ public class Addition
 
         public void calculate()
         {
-            int choice = Integer.parseInt(JOptionPane.showInputDialog("What's the 1st number you wish to add?"));
+            Double choice = Double.parseDouble(JOptionPane.showInputDialog("What's the 1st number you wish to add?"));
 
             additives.add(choice);
             
-            choice = Integer.parseInt(JOptionPane.showInputDialog("What's the 2nd number you wish to add?"));
+            choice = Double.parseDouble(JOptionPane.showInputDialog("What's the 2nd number you wish to add?"));
     
             additives.add(choice);
     
@@ -31,7 +31,7 @@ public class Addition
             {
                 do
                 {
-                    choice = Integer.parseInt(JOptionPane.showInputDialog("What is the next number you would like to add? "));
+                    choice = Double.parseDouble(JOptionPane.showInputDialog("What is the next number you would like to add? "));
                     additives.add(choice);
     
                     selectedState = JOptionPane.showOptionDialog(null, "Would you like to add another number?", "Addition Calculator", +
