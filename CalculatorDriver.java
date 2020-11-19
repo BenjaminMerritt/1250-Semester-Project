@@ -3,6 +3,11 @@ import javax.swing.JOptionPane;
 
 public class CalculatorDriver
 {
+    static Addition add = new Addition();
+    static Multiplication multi = new Multiplication();
+    static SalesTax tax = new SalesTax();
+    static Exponential exponent = new Exponential();
+
     public static void main(String[] args) 
     {
         int choice; //Int to hold the choice from the user.
@@ -32,7 +37,7 @@ public class CalculatorDriver
         switch(choice)
         {
             case 1:
-                
+                add.calculate();
                 break;
             case 2:
 
@@ -44,14 +49,16 @@ public class CalculatorDriver
 
                 break;
             case 5:
-
+                exponent.calculate();
                 break;
             case 6:
-
+                tax.calculate();
                 break;
             case 7:
 
                 break;
+            case 0:
+                JOptionPane.showMessageDialog(null, "Thank you for using our Calculator!");
             default:
                 JOptionPane.showMessageDialog(null, "Invalid menu selection, please enter a valid input.", "Invalid Input", JOptionPane.ERROR_MESSAGE);
                 break;
