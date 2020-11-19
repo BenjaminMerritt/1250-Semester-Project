@@ -7,6 +7,7 @@ public class CalculatorDriver
     static Multiplication multi = new Multiplication();
     static SalesTax tax = new SalesTax();
     static Exponential exponent = new Exponential();
+    static History history = new History();
 
     public static void main(String[] args) 
     {
@@ -50,9 +51,11 @@ public class CalculatorDriver
                 break;
             case 5:
                 exponent.calculate();
+                history.add(exponent.toString());
                 break;
             case 6:
                 tax.calculate();
+                history.add(tax.toString());
                 break;
             case 7:
 
