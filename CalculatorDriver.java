@@ -41,6 +41,7 @@ public class CalculatorDriver
         {
             case 1:
                 add.calculate();
+                history.add(add.toString());
                 break;
             case 2:
                 minus.calculate();
@@ -48,9 +49,11 @@ public class CalculatorDriver
                 break;
             case 3:
                 multi.calculate();
+                history.add(multi.toString());
                 break;
             case 4:
                 divide.calculate();
+                history.add(divide.toString());
                 break;
             case 5:
                 exponent.calculate();
