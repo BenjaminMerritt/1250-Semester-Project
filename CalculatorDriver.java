@@ -3,13 +3,7 @@ import javax.swing.JOptionPane;
 
 public class CalculatorDriver
 {
-    static Addition add = new Addition();
-    static Subtraction minus = new Subtraction();
-    static Multiplication multi = new Multiplication();
-    static Division divide = new Division();
-    static SalesTax tax = new SalesTax();
-    static Exponential exponent = new Exponential();
-    static History history = new History();
+   static History history = new History();
 
     public static void main(String[] args) 
     {
@@ -40,26 +34,32 @@ public class CalculatorDriver
         switch(choice)
         {
             case 1:
+                Addition add = new Addition();
                 add.calculate();
                 history.add(add.toString());
                 break;
             case 2:
+                Subtraction minus = new Subtraction();
                 minus.calculate();
                 history.add(minus.toString());
                 break;
             case 3:
+                Multiplication multi = new Multiplication();
                 multi.calculate();
                 history.add(multi.toString());
                 break;
             case 4:
+                Division divide = new Division();
                 divide.calculate();
                 history.add(divide.toString());
                 break;
             case 5:
+                Exponential exponent = new Exponential();
                 exponent.calculate();
                 history.add(exponent.toString());
                 break;
             case 6:
+                SalesTax tax = new SalesTax();
                 tax.calculate();
                 history.add(tax.toString());
                 break;
