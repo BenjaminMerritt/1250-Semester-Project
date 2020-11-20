@@ -54,7 +54,7 @@ public class Subtraction
 
         for(int i = 0; i < subtrahends.size(); i++)
         {
-            minuend = minuend - subtrahends.get(i);
+            difference = difference - subtrahends.get(i);
         }
 
         JOptionPane.showMessageDialog(null, toString());
