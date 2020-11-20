@@ -43,15 +43,9 @@ public class Multiplication
         
         Double multiply = 1.0;
 
-<<<<<<< HEAD
-            JOptionPane.showMessageDialog(null, toString());
-
-            multiplicatives.clear();
-=======
         for(int i = 0; i < multiplicatives.size(); i++)
         {
             multiply = multiply * multiplicatives.get(i);
->>>>>>> 651198cdcb22fa6182f4944c844b9e45eb369a25
         }
     
         JOptionPane.showMessageDialog(null, "The product of the numbers you have entered is " + multiply);
