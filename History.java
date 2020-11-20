@@ -8,7 +8,13 @@ public class History
 
     public History()
     {
+        String msg = "";
 
+        history.add(msg);
+        history.add(msg);
+        history.add(msg);
+        history.add(msg);
+        history.add(msg);
     }
 
     public void add(String calculation)
@@ -22,7 +28,7 @@ public class History
 
         for(int i = (history.size() - 5); i < history.size(); i++)
         {
-            msg += "\n" + history.get(i).toString();
+            msg += "\n" + history.get(i).toString() + "\n";
         }
 
         JOptionPane.showMessageDialog(null, msg);
