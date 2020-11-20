@@ -4,7 +4,9 @@ import javax.swing.JOptionPane;
 public class CalculatorDriver
 {
     static Addition add = new Addition();
+    static Subtraction minus = new Subtraction();
     static Multiplication multi = new Multiplication();
+    static Division divide = new Division();
     static SalesTax tax = new SalesTax();
     static Exponential exponent = new Exponential();
     static History history = new History();
@@ -41,7 +43,7 @@ public class CalculatorDriver
                 add.calculate();
                 break;
             case 2:
-
+                minus.calculate();
                 break;
             case 3:
                 multi.calculate();
