@@ -44,6 +44,7 @@ public class CalculatorDriver
                 break;
             case 2:
                 minus.calculate();
+                history.add(minus.toString());
                 break;
             case 3:
                 multi.calculate();
