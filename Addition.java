@@ -47,5 +47,7 @@ public class Addition
             }
         
             JOptionPane.showMessageDialog(null, "The sum of the numbers you have entered is " + sum);
+
+            additives.clear();
         }
 }

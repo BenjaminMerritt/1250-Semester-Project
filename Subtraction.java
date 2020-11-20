@@ -58,6 +58,8 @@ public class Subtraction
         }
 
         JOptionPane.showMessageDialog(null, toString());
+
+        subtrahends.clear();
     }
 
     public String toString()

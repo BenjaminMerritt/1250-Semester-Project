@@ -4,6 +4,9 @@ import java.util.ArrayList;
 public class Division{
     
     ArrayList<Double> divisors = new ArrayList<Double>();
+    double dividend;
+    double quotient;
+
 
     public Division()
     {
@@ -19,7 +22,7 @@ public class Division{
 
         input = JOptionPane.showInputDialog("What value would you like to subtract from the first?");
 
-        double divisors = Double.parseDouble(input);
+        double divisor = Double.parseDouble(input);
     
         divisors.add(divisor);
 
@@ -55,22 +58,24 @@ public class Division{
         }
 
         JOptionPane.showMessageDialog(null, toString());
-        
+
+        divisors.clear();
     }
     public String toString()
     {
-        String msg = "***** Subtraction Calculation *****";
+        String msg = "***** Division Calculation *****";
 
         msg += "\nDividend: " + dividend;
 
         msg += "\nDivisor(s): ";
 
-        for(int i =0; i < divisors.size(); i++)
+        for(int i = 0; i < divisors.size(); i++)
         {
-            msg += divisors.get(i) + ", ";
+            msg += divisors.get(i) + " ";
         }
 
         msg += "\nQuotient: " + quotient;
 
         return msg;
+    }
 }

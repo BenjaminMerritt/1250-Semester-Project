@@ -49,5 +49,7 @@ public class Multiplication
             JOptionPane.showMessageDialog(null, "The product of the numbers you have entered is " + multiply);
 
             multiply = 1.0;
+
+            multiplicatives.clear();
         }
 }
