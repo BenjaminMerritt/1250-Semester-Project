@@ -56,7 +56,7 @@ public class Addition
         }
         public String toString()
     {
-        String msg = "***** Division Calculator *****";
+        String msg = "***** Addition Calculation *****";
 
         msg += "\nAddends: " + choice;
 
