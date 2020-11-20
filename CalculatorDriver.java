@@ -49,7 +49,7 @@ public class CalculatorDriver
                 multi.calculate();
                 break;
             case 4:
-
+                divide.calculate();
                 break;
             case 5:
                 exponent.calculate();
