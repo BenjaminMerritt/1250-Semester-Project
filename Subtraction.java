@@ -38,14 +38,8 @@ public class Subtraction {
                         JOptionPane.DEFAULT_OPTION, selectedState, null, possibleStates, possibleStates[0]);
             } while(selectedState == 0);
             }
-   
-            int difference = 0;
 
-            for(int i = 0; i < subtrahends.size(); i++){
-                
-                difference += difference - subtrahends.get(i);
-            }
+            
 
-            JOptionPane.showMessageDialog(null, "The difference of the numbers you have entered is " + difference);
         } 
 }
