@@ -48,6 +48,26 @@ public class Addition
         
             JOptionPane.showMessageDialog(null, "The sum of the numbers you have entered is " + sum);
 
+            JOptionPane.showMessageDialog(null, toString());
+
             additives.clear();
         }
+        public String toString()
+    {
+        String msg = "***** Division Calculator *****";
+
+        msg += "\nDividend: " + choice;
+
+        msg += "\nDivisor(s): ";
+
+        for(int i =0; i < additives.size(); i++)
+        {
+            msg += additives.get(i) + ", ";
+        }
+
+        msg += "\nQuotient: " + additives;
+
+        return msg;
+    }
+        
 }
