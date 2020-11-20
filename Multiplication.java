@@ -4,6 +4,8 @@ import java.util.ArrayList;
 public class Multiplication 
 {
         ArrayList<Double> multiplicatives = new ArrayList<Double>();
+        Double choice;
+        Double multiply;
 
         public Multiplication()
         {
@@ -52,4 +54,19 @@ public class Multiplication
 
             multiplicatives.clear();
         }
+        public String toString()
+    {
+        String msg = "***** Multiplication Calculation *****";
+
+        msg += "\nMultiplicitives: " + choice;
+
+        for(int i =0; i < multiplicatives.size(); i++)
+        {
+            msg += " + " + multiplicatives.get(i);
+        }
+
+        msg += "\nProduct: " + multiplicatives;
+
+        return msg;
+    }
 }
