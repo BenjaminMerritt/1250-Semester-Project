@@ -64,7 +64,7 @@ public class Subtraction
 
     public String toString()
     {
-        String msg = "***** Subtraction Calculation *****";
+        String msg = "***** Subtraction Calculator *****";
 
         msg += "\nMinuend: " + minuend;
 
