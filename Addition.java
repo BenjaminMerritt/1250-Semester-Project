@@ -4,6 +4,8 @@ import java.util.ArrayList;
 public class Addition 
 {
         ArrayList<Double> additives = new ArrayList<Double>();
+        double choice;
+        double sum;
 
         public Addition()
         {
@@ -12,7 +14,7 @@ public class Addition
 
         public void calculate()
         {
-            Double choice = Double.parseDouble(JOptionPane.showInputDialog("What's the 1st number you wish to add?"));
+            choice = Double.parseDouble(JOptionPane.showInputDialog("What's the 1st number you wish to add?"));
 
             additives.add(choice);
             
@@ -39,7 +41,7 @@ public class Addition
                 } while(selectedState == 0);
             }
            
-            int sum = 0;
+            sum = 0;
 
             for(int i = 0; i < additives.size(); i++)
             {
@@ -56,16 +58,14 @@ public class Addition
     {
         String msg = "***** Division Calculator *****";
 
-        msg += "\nDividend: " + choice;
-
-        msg += "\nDivisor(s): ";
+        msg += "\nAddends: " + choice;
 
         for(int i =0; i < additives.size(); i++)
         {
-            msg += additives.get(i) + ", ";
+            msg += " + " + additives.get(i);
         }
 
-        msg += "\nQuotient: " + additives;
+        msg += "\nSum: " + additives;
 
         return msg;
     }

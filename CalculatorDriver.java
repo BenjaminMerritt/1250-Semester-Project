@@ -61,7 +61,7 @@ public class CalculatorDriver
                 history.add(tax.toString());
                 break;
             case 7:
-
+                history.getHistory();
                 break;
             case 0:
                 JOptionPane.showMessageDialog(null, "Thank you for using our Calculator!");
