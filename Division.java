@@ -62,7 +62,7 @@ public class Division{
     }
     public String toString()
     {
-        String msg = "***** Division Calculator *****";
+        String msg = "***** Division Calculation *****";
 
         msg += "\nDividend: " + dividend;
 

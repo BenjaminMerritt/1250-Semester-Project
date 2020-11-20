@@ -18,11 +18,13 @@ public class History
 
     public void getHistory()
     {
-        String msg = "***** Calculator History *****\n";
+        String msg = "======== Calculator History ========\n";
 
         for(int i = (history.size() - 5); i < history.size(); i++)
         {
             msg += "\n" + history.get(i).toString();
         }
+
+        JOptionPane.showMessageDialog(null, msg);
     }
 }
