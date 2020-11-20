@@ -51,12 +51,11 @@ public class Addition
             JOptionPane.showMessageDialog(null, "The sum of the numbers you have entered is " + sum);
 
             JOptionPane.showMessageDialog(null, toString());
-
-            additives.clear();
         }
+        
         public String toString()
     {
-        String msg = "***** Addition Calculation *****";
+        String msg = "***** Division Calculator *****";
 
         msg += "\nAddends: " + choice;
 
