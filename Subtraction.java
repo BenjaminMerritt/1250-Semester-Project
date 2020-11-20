@@ -2,7 +2,7 @@ import javax.swing.JOptionPane;
 import java.util.ArrayList;
 
 public class Subtraction {
-    
+       
         ArrayList<Double> subtrahends = new ArrayList<Double>();
 
         public Subtraction(){   
@@ -13,13 +13,11 @@ public class Subtraction {
 
         {       
     
-        Double choice = Double.parseDouble(JOptionPane.showInputDialog("What do you want to subtract from?"));
+        String input = JOptionPane.showInputDialog("What do you want to subtract from?");
     
-        subtrahends.add(choice);
+        input = Double.parseDouble(JOptionPane.showInputDialog("What do you want to subtract by?"));
     
-        choice = Double.parseDouble(JOptionPane.showInputDialog("What do you want to subtract by?"));
-    
-        subtrahends.add(choice);
+        subtrahends.add(input);
 
         int selectedState = 0;
 
@@ -30,16 +28,18 @@ public class Subtraction {
     
         if(selectedState == 0){
             do{
-                choice = Double.parseDouble(JOptionPane.showInputDialog("What is the next number you would like to Subtract? "));
+                input = Double.parseDouble(JOptionPane.showInputDialog("What is the next number you would like to Subtract? "));
                 
-                subtrahends.add(choice);
+                subtrahends.add(input);
 
                 selectedState = JOptionPane.showOptionDialog(null, "Would you like to Subtract another number?", "Subtraction Calculator", +
                         JOptionPane.DEFAULT_OPTION, selectedState, null, possibleStates, possibleStates[0]);
             } while(selectedState == 0);
             }
 
-            
+            int difference = 0;
+
+            for(int i = 0; i < )
 
         } 
 }
