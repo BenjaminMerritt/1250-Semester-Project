@@ -52,6 +52,8 @@ public class Multiplication
 
             multiply = 1.0;
 
+            JOptionPane.showMessageDialog(null, toString());
+
             multiplicatives.clear();
         }
         public String toString()
