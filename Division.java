@@ -5,6 +5,9 @@ public class Division{
     
     ArrayList<Double> divisors = new ArrayList<Double>();
 
+    double dividend;
+    double quotient;
+
     public Division()
     {
         
@@ -19,7 +22,7 @@ public class Division{
 
         input = JOptionPane.showInputDialog("What is the number you would like to divide by?");
 
-        double divisors = Double.parseDouble(input);
+        double divisor = Double.parseDouble(input);
     
         divisors.add(divisor);
 
@@ -73,4 +76,6 @@ public class Division{
         msg += "\nQuotient: " + quotient;
 
         return msg;
+    }
+}
 
