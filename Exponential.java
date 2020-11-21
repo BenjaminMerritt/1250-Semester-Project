@@ -83,9 +83,8 @@ public class Exponential
     {
         String msg = "***** Exponential Calculation *****";
 
-        msg += "\n \nBase: " + base;
+        msg += "\nBase: " + base;
         msg += "\nPower: " + power;
-        msg += "\n----------------------";
         msg += "\nAnswer: " + answer;
 
         return msg;

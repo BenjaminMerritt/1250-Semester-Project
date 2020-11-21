@@ -3,13 +3,13 @@ import java.util.ArrayList;
 
 public class Addition 
 {
-        ArrayList<Double> additives = new ArrayList<Double>();
+        ArrayList<Double> additives;
         double choice;
         double sum;
 
         public Addition()
         {
-            
+            additives = new ArrayList<>();
         } 
 
         public void calculate()
@@ -45,7 +45,7 @@ public class Addition
 
             for(int i = 0; i < additives.size(); i++)
             {
-                sum += additives.get(i);
+                sum = sum + additives.get(i);
             }
         
             JOptionPane.showMessageDialog(null, "The sum of the numbers you have entered is " + sum);
@@ -54,19 +54,24 @@ public class Addition
         }
         
         public String toString()
-    {
-        String msg = "***** Division Calculator *****";
-
-        msg += "\nAddends: " + choice;
-
-        for(int i =0; i < additives.size(); i++)
         {
-            msg += " + " + additives.get(i);
+            String msg = "***** Addition Calculation *****";
+
+            msg += "\nAddends: ";
+
+            for(int i =0; i < additives.size(); i++)
+            {
+                msg += additives.get(i);
+
+                if(additives.size() > (i + 1))
+                {
+                    msg += " + ";
+                }
+            }
+
+            msg += "\nSum: " + sum;
+
+            return msg;
         }
-
-        msg += "\nSum: " + additives;
-
-        return msg;
-    }
         
 }

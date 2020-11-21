@@ -3,19 +3,17 @@ import java.util.ArrayList;
 
 public class Division{
     
-    ArrayList<Double> divisors = new ArrayList<Double>();
-
+    ArrayList<Double> divisors;
     double dividend;
     double quotient;
 
     public Division()
     {
-        
+        divisors = new ArrayList<>();
     } 
 
     public void calculate()
     {
-
         String input = JOptionPane.showInputDialog("What do you want to divide?");
 
         dividend = Double.parseDouble(input);
@@ -46,8 +44,6 @@ public class Division{
                 selectedState = JOptionPane.showOptionDialog(null, "Would you like to divide by another number?", "Division Calculator", +
                         JOptionPane.DEFAULT_OPTION, selectedState, null, possibleStates, possibleStates[0]);
             } while(selectedState == 0);
-
-            
         } 
         
         quotient = dividend;
@@ -58,8 +54,8 @@ public class Division{
         }
 
         JOptionPane.showMessageDialog(null, toString());
-        
     }
+
     public String toString()
     {
         String msg = "***** Division Calculation *****";

@@ -6,12 +6,13 @@ public class Subtraction
 
     double minuend;
     double difference;
+    double subtrahend;
        
-    ArrayList<Double> subtrahends = new ArrayList<Double>();
+    ArrayList<Double> subtrahends;
 
     public Subtraction()
     {
-
+        subtrahends = new ArrayList<>();
     }
 
     public void calculate()
@@ -22,7 +23,7 @@ public class Subtraction
 
         input = JOptionPane.showInputDialog("What value would you like to subtract from the first?");
 
-        double subtrahend = Double.parseDouble(input);
+        subtrahend = Double.parseDouble(input);
     
         subtrahends.add(subtrahend);
 
@@ -46,8 +47,6 @@ public class Subtraction
                 selectedState = JOptionPane.showOptionDialog(null, "Would you like to Subtract another number?", "Subtraction Calculator", +
                         JOptionPane.DEFAULT_OPTION, selectedState, null, possibleStates, possibleStates[0]);
             } while(selectedState == 0);
-
-            
         } 
         
         difference = minuend;
@@ -58,8 +57,6 @@ public class Subtraction
         }
 
         JOptionPane.showMessageDialog(null, toString());
-
-        subtrahends.clear();
     }
 
     public String toString()
