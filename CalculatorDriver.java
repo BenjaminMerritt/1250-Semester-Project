@@ -68,6 +68,7 @@ public class CalculatorDriver
                 break;
             case 0:
                 JOptionPane.showMessageDialog(null, "Thank you for using our Calculator!");
+                break;
             default:
                 JOptionPane.showMessageDialog(null, "Invalid menu selection, please enter a valid input.", "Invalid Input", JOptionPane.ERROR_MESSAGE);
                 break;
