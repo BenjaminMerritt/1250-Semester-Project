@@ -101,7 +101,7 @@ public class Addition
             //displays the total of the inputed numbers
             JOptionPane.showMessageDialog(null, "The sum of the numbers you have entered is " + sum);
 
-            //bruh it does something
+            //Displays the toString method in a message dialog box.
             JOptionPane.showMessageDialog(null, toString());
         }
         
