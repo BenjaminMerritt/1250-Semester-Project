@@ -23,15 +23,18 @@ import java.util.ArrayList;  //Import ArrayList class
 
 public class Multiplication 
 {
-    ArrayList<Double> multiplicatives = new ArrayList<Double>(); //creates an ArrayList to store input variables
+    ArrayList<Double> multiplicatives; //creates an ArrayList to store input variables
     Double choice;  //Double to prompt for the numbers stored in multiplicatives
     Double multiply;    // Double used to add the numbers in multiplicatives together
 
-    
-
+    /**
+     * Implements a Multiplication constructor to instantiate the array list.
+     * 
+     * Date created: 11/13/2020
+     */
     public Multiplication()
     {
-        
+        multiplicatives = new ArrayList<Double>();  //Instantiates the array list.
     } 
 
     /**
@@ -89,28 +92,31 @@ public class Multiplication
     
         //displays the total of the inputed numbers
         JOptionPane.showMessageDialog(null, "The product of the numbers you have entered is " + multiply);
-
-        multiply = 1.0;
-
-        multiplicatives.clear();
     }
 
     /**
-     * sets up the class to be sent to the driver
+     * Returns a string containing all of the components for
+     * the equation.
+     * 
+     * Date created: 11/13/2020
      */
     public String toString()
     {
+        //String msg to hold the message, adds header.
         String msg = "***** Multiplication Calculation *****";
 
+        //Adds the choice;
         msg += "\nMultiplicitives: " + choice;
 
+        //Adds each multiplicative.
         for(int i =0; i < multiplicatives.size(); i++)
         {
             msg += " + " + multiplicatives.get(i);
         }
 
+        //Adds the product.
         msg += "\nProduct: " + multiplicatives;
 
-        return msg;
+        return msg; //Returns msg.
     }
 }

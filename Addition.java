@@ -105,25 +105,36 @@ public class Addition
             JOptionPane.showMessageDialog(null, toString());
         }
         
+        /**
+         * Instantiates a toString method to return a string containing
+         * all of the components for the calculation.
+         * 
+         * Date created: 11/13/2020
+         */
         public String toString()
         {
+            //Instatntiates a string msg to hold the components. Adds a header.
             String msg = "***** Addition Calculation *****";
 
+            //Adds the addends header.
             msg += "\nAddends: ";
 
+            //For each addend in the list, add it to msg along with a + sign.
             for(int i =0; i < additives.size(); i++)
             {
-                msg += additives.get(i);
+                msg += additives.get(i);    //Adds each additive.
 
+                //If the size is greater than i +1, add a + sign.
                 if(additives.size() > (i + 1))
                 {
                     msg += " + ";
                 }
             }
 
+            //Adds the sum to msg.
             msg += "\nSum: " + sum;
 
-            return msg;
+            return msg; //Returns the string.
         }
         
 }
